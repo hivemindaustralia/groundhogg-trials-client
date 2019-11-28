@@ -6,6 +6,7 @@ use Groundhogg\Admin\Admin_Menu;
 use Groundhogg\DB\Manager;
 use Groundhogg\Extension;
 use GroundhoggTrialsClient\Steps\Response_Hook;
+use GroundhoggTrialsClient\Steps\Trial_Request;
 
 class Plugin extends Extension
 {
@@ -66,12 +67,20 @@ class Plugin extends Extension
         return GROUNDHOGG_TRIALS_CLIENT__FILE__;
     }
 
+    public function add_replacements($replacements)
+    {
+        $edd_replacements = new Replacements();
+        foreach ($edd_replacements->get_replacements() as $replacement ){
+            $replacements->add( $replacement[ 'code' ], $replacement[ 'callback' ], $replacement[ 'description' ] );
+        }
+    }
+
     /**
      * @param \Groundhogg\Steps\Manager $manager
      */
     public function register_funnel_steps( $manager )
     {
-        $manager->add_step( new Response_Hook() );
+        $manager->add_step( new Trial_Request() );
     }
 
     /**

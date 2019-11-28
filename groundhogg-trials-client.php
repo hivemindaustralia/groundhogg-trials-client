@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Groundhogg - Trials Client (Private Plugin)
  * Plugin URI:  https://www.groundhogg.io/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
- * Description: The description of your extension.
+ * Description: Create and stop trials via the funnel builder.
  * Version: 1.0
  * Author: Groundhogg Inc.
  * Author URI: https://www.groundhogg.io/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
