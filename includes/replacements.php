@@ -51,7 +51,7 @@ class Replacements
         }
 
         $html = sprintf( __( "<b>Login:</b> %s\n<b>Username:</b> %s\n<b>Password:</b> %s" ),
-            get_array_var( $trial_data, 'site_url' ) . '/wp-admin/',
+            get_array_var( $trial_data, 'home_url' ),
             get_array_var( $trial_data, 'user_name' ),
             get_array_var( $trial_data, 'password' )
         );
