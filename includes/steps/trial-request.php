@@ -168,7 +168,7 @@ class Trial_Request extends Action
                 'user_id'   => absint( $response->user_id ),
                 'site_id'   => absint( $response->site_id ),
                 'site_url'  => esc_url_raw( $response->site_url ),
-                'site_admin_url' => esc_url_raw( $response->site_url ) . '/wp-admin/',
+                'home_url'  => esc_url_raw( $response->home_url ),
                 'user_name' => sanitize_text_field( $response->user_name ),
                 'password'  => sanitize_text_field( $response->password ),
                 'trial_start_time' => time()
